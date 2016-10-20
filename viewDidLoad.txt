@@ -1,0 +1,22 @@
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
+	scrollView.maximumZoomScale = 3.0;
+	scrollView.minimumZoomScale = 0.75;
+	scrollView.clipsToBounds = YES;
+	
+	scrollView.delegate = self;
+
+	// Logging
+	/*
+	NSLog(@"imageView.frame.size.width: %f", imageView.frame.size.width);
+	NSLog(@"imageView.frame.size.height: %f", imageView.frame.size.height);
+	NSLog(@"scrollView.frame.size.width: %f", scrollView.frame.size.width);
+	NSLog(@"scrollView.frame.size.height: %f", scrollView.frame.size.height);
+	NSLog(@"scrollView.bounds.size.width: %f", scrollView.bounds.size.width);
+	NSLog(@"scrollView.bounds.size.height: %f", scrollView.bounds.size.height);
+	NSLog(@"scrollView.bounds.size.height: %f", scrollView.bounds.size.width / imageView.frame.size.width);
+	*/
+}
